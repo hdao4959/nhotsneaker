@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADIDAS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0 auto;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Roboto";
+        }
+
+        .container {
+            width: 1440px;
+
+        }
+
+        /*Header*/
+        nav {
+            background-color: black;
+            width: 1440px;
+            height: 100px;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .logo {
+            margin-top: 15px;
+        }
+
+        ul {
+            display: flex;
+        }
+
+        .menu ul li {
+            margin-top: 10px;
+            list-style-type: none;
+            text-decoration: none;
+            padding: 30px;
+            font-size: 23px;
+        }
+
+        .menu ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .menu ul li a:hover {
+            color: rgb(141, 95, 9);
+        }
+
+        ul li:hover {
+            color: rgb(141, 95, 9);
+        }
+
+        nav .icon {
+            padding-top: 40px;
+        }
+
+        nav .icon i {
+            padding: 0 30px;
+        }
+
+        .fa-regular {
+            font-size: 30px;
+        }
+
+        .fa-regular:hover {
+            color: rgb(141, 95, 9);
+        }
+
+        .fa-solid {
+            font-size: 30px;
+        }
+
+        .fa-solid:hover {
+            color: rgb(141, 95, 9);
+        }
+
+        /*Banner*/
+        .banner {
+            position: relative;
+            width: 1440px;
+            height: 287px;
+            overflow: hidden;
+        }
+        .banner img{
+            width: 100%;
+            height: 100%;
+
+        }
+        /*Article*/
+        article {
+            display: flex;
+            flex-direction: row;
+            height: 1700px;
+        }
+
+        /*Left*/
+        article .left {
+            border-right: 1px solid gray;
+            width: 400px;
+        }
+
+        span {
+            font-size: 30px;
+            margin-left: 20px;
+            font-size: 40px;
+        }
+
+        .subject i {
+            margin-right: 20px;
+        }
+
+        .circle {
+            margin-left: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+        }
+
+        .color {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            margin: 8px;
+        }
+
+        .white {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            margin: 8px;
+            border: 1px solid black;
+        }
+
+        .color:hover {
+            border: 3px solid #3399FF;
+        }
+
+        .white:hover {
+            border: 3px solid #3399FF;
+        }
+
+        article .left p {
+            font-size: 20px;
+            padding-left: 20px;
+            padding-bottom: 10px;
+        }
+
+        article .left .button1 {
+            margin-left: 20px;
+            height: 30px;
+            padding: 5px;
+        }
+        article .left .button2 {
+            margin-left: 10px;
+            height: 30px;
+            padding: 5px;
+        }
+        article .left .button3 {
+            margin-left: 10px;
+            height: 30px;
+            padding: 5px;
+        }
+
+        /*Right*/
+        article .right {
+            width: calc(1440px - 400px);
+        }
+
+        .product {
+            flex-wrap: wrap;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .prd {
+            margin-top: 30px;
+            width: 285px;
+            height: 380px;
+            border: 1px solid rgb(215, 214, 214);
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            cursor: pointer;
+        }
+        .prd img{
+            width: 100%;
+            height: 220px;
+        }
+
+        .prd:hover {
+            box-shadow: 4px 4px rgb(227, 227, 227);
+        }
+
+        .prd .text {
+            font-weight: 500;
+            font-family: Montserrat;
+            text-align: center;
+            padding: 20px;
+            font-size: 18px;
+            height: 90px;
+        }
+
+        .prd .price {
+            font-weight: 500;
+            font-size: 20px;
+            color: #BC0000;
+            margin-top: 10px;
+        }
+
+
+        /*Footer*/
+        footer {
+            flex-wrap: wrap;
+            width: 1440px;
+            height: 400px;
+            background-color: black;
+            color: white;
+        }
+
+        .area1 {
+            display: flex;
+            flex-direction: row;
+            height: 300px;
+            border-bottom: 1px solid white;
+        }
+
+        .area1 .column1 {
+            padding-top: 30px;
+        }
+
+        .area1 .column1 p {
+            padding-top: 15px;
+        }
+
+        .area1 .column2 {
+            padding-top: 50px;
+        }
+
+        .area1 .column2 p {
+            padding-top: 15px;
+        }
+
+        .area1 .column3 {
+            padding-top: 50px;
+        }
+
+        .area1 .column3 p {
+            padding-top: 15px;
+        }
+
+        .area1 .column4 .icon {
+            display: flex;
+            flex-direction: row;
+            padding-top: 40px;
+            margin-bottom: 20px;
+        }
+
+        .area1 .column4 .icon i {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .area1 .column4 button {
+            color: white;
+            background-color: black;
+        }
+
+        .area2 {
+            text-align: center;
+            margin-top: 35px;
+        }
+
+        .fa-brands {
+            font-size: 40px;
+        }
+
+        label p {
+            font-size: 17px;
+        }
+
+        .fa-square {
+            font-size: 15px;
+            padding-right: 5px;
+        }
+
+        .subject {
+            margin-top: 30px;
+            margin-bottom: 5px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        @media screen and (min-width: 600px) {
+            * {
+                max-width: 100%;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <div class="logo">
+                <a href="index.html"><img src="MLB/Logo.png" width="180px" height="70px" alt=""></a>
+            </div>
+
+            <div class="menu">
+                <ul>
+                    <li><a href="MLB.html" >MLB</a></li>
+                    <li><a href="NIKE.html" >NIKE</a></li>
+                    <li><a href="ADIDAS.html" >ADIDAS</a></li>
+                    <li><a href="VANS.html" >VANS</a></li>
+                    <li><a href="CONVERSE.html" >CONVERSE</a></li>
+                </ul>
+            </div>
+
+            <div class="icon">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <i class="fa-regular fa-user"></i>
+                <i class="fa-regular fa-heart"></i>
+                <i class="fa-solid fa-cart-shopping"></i>
+
+            </div>
+        </nav>
+
+        <div class="banner">
+            <img src="ADIDAS/banner.jpg" alt="">
+        </div>
+
+        <article>
+
+            <div class="left">
+                <div class="subject">
+                    <span>Sắp xếp</span>
+                    <i class="fa-solid fa-caret-down"></i>
+                </div>
+                <p> <i class="fa-regular fa-square"></i>Mặc định </p>
+                <p> <i class="fa-regular fa-square"></i>Tên A - Z</p>
+                <p> <i class="fa-regular fa-square"></i>Tên Z - A</p>
+                <p> <i class="fa-regular fa-square"></i>Giá thấp đến cao</p>
+                <p> <i class="fa-regular fa-square"></i>Giá cao đến thấp</p>
+                <div class="subject">
+                    <span>Loại</span>
+                    <i class="fa-solid fa-caret-down"></i>
+                </div>
+                <p> <i class="fa-regular fa-square"></i>Giày ADIDAS</p>
+                <div class="subject">
+                    <span>Nhà phân phối</span>
+                    <i class="fa-solid fa-caret-down"></i>
+                </div>
+                <p> <i class="fa-regular fa-square"></i>ADIDAS Việt Nam</p>
+                <div class="subject">
+                    <span>Tag</span>
+                    <i class="fa-solid fa-caret-down"></i>
+                </div>
+                <button class="button1">New Arrivals</button>
+                <button class="button2">Best Seller</button>
+                <button class="button3">Seller off</button>
+                <div class="subject">
+                    <span>Màu sắc</span>
+                    <i class="fa-solid fa-caret-down"></i>
+                </div>
+                <div class="circle">
+                    <div class="white" style="background-color: #FFFFFF;"></div>
+                    <div class="color" style="background-color: #000000;"></div>
+                    <div class="color" style="background-color: #CC9966;"></div>
+                    <div class="color" style="background-color: #3399FF;"></div>
+                    <div class="color" style="background-color: #99FF66;"></div>
+                    <div class="color" style="background-color: #FF66CC;"></div>
+                    <div class="color" style="background-color: #FF9999;"></div>
+                    <div class="color" style="background-color: #990000;"></div>
+                    <div class="color" style="background-color: #FFCC33;"></div>
+                    <div class="color" style="background-color: #FFFF33;"></div>
+                    <div class="color" style="background-color: #ABABAB;"></div>
+                </div>
+                <div class="subject">
+                    <span>Logo</span>
+                    <i class="fa-solid fa-caret-down"></i>
+                </div>
+                <p> <i class="fa-regular fa-square"></i>New York Yankees (NY)</p>
+                <p> <i class="fa-regular fa-square"></i>Boston Red Sox (B)</p>
+                <p> <i class="fa-regular fa-square"></i>Los Angeles Dodgers (LA)</p>
+                <p> <i class="fa-regular fa-square"></i>Philadelphia Phillies (P)</p>
+                <p> <i class="fa-regular fa-square"></i>San Francisco Giants (SF)</p>
+            </div>
+            <div class="right">
+                <div class="product">
+                    <div class=" prd ">
+                        <img src="ADIDAS/adidas1.jpg" alt="">
+                        <div class="text">Giày Adidas Chaussure Basse Grand Court TD Blanche</div>
+                        <div class="price">3.790.000đ</div>
+                    </div>
+                    <div class="prd ">
+                        <img src="ADIDAS/adidas2.jpg" alt="">
+                        <div class="text">Giày Adidas Sò Superstar trắng sọc đen Rep 1:1</div>
+                        <div class="price">3.790.000đ</div>
+                    </div>
+                    <div class="prd ">
+                        <img src="ADIDAS/adidas3.1.jpg" alt="">
+                        <div class="text">Giày Adidas Campus 'Green' HR1467 </div>
+                        <div class="price">3.790.000đ</div>
+                    </div>
+                    <div class="prd ">
+                        <img src="ADIDAS/adidas4.jpg" alt="">
+                        <div class="text">Giày Adidas Forum Exhibit Low 2.0 'Kream' </div>
+                        <div class="price">3.790.000đ</div>
+                    </div>
+                    <div class="prd ">
+                        <img src="ADIDAS/adidas5.jpg" alt="">
+                        <div class="text">Giày Adidas Chạy Bộ AlphaBounce 2021</div>
+                        <div class="price">3.790.000đ</div>
+                    </div>
+                    <div class="prd ">
+                        <img src="ADIDAS/adidas6.jpg" alt="">
+                        <div class="text">Giày Adidas Ultraboost 4.0 Hồng Phấn Đế Trắng</div>
+                        <div class="price">3.790.000đ</div>
+                    </div>
+                    <div class=" prd ">
+                        <img src="ADIDAS/adidas7.jpg" alt="">
+                        <div class="text">GIÀY Adidas Climacool Bounce</div>
+                        <div class="price">3.790.000đ</div>
+                    </div>
+                    <div class="prd ">
+                        <img src="ADIDAS/adidas8.jpg" alt="">
+                        <div class="text">Giày Thể Thao Adidas Supernova </div>
+                        <div class="price">3.790.000đ</div>
+                    </div>
+                    <div class="prd ">
+                        <img src="ADIDAS/adidas9.jpg" alt="">
+                        <div class="text">Giày Adidas Yeezy 350 V2 Cloud White Like Auth</div>
+                        <div class="price">3.790.000đ</div>
+                    </div>
+                    <div class=" prd prd1">
+                        <img src="ADIDAS/adidas10.1.jpg" alt="">
+                        <div class="text">Giày Adidas Yeezy Boost 700 V2 'Static'</div>
+                        <div class="price">3.790.000đ</div>
+                    </div>
+                    <div class="prd prd2">
+                        <img src="ADIDAS/adidas11.jpg" alt="">
+                        <div class="text">Giày Adidas Yeezy 700 Wave Runner Solid Grey</div>
+                        <div class="price">3.790.000đ</div>
+                    </div>
+                    <div class="prd prd3">
+                        <img src="ADIDAS/adidas12.jpg" alt="">
+                        <div class="text">Giày Adidas Yeezy 350 V2 True Form</div>
+                        <div class="price">3.790.000đ</div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <footer>
+            <div class="area1">
+                <div class="column1">
+                    <img src="MLB/Logo.png" alt="">
+                    <p>Hanoi Capital - Vietnam</p>
+                    <p>Ho Chi Minh City - Vietnam </p>
+                    <p>+0369037600</p>
+                    <p>ZaloBusiness: +0369037600</p>
+                    <p>Giờ làm việc : 8:00am - 10:00pm</p>
+                </div>
+                <div class="column2">
+                    <h2>HỖ TRỢ</h2>
+                    <p>Tìm kiếm sản phẩm</p>
+                    <p>Giỏ hàng</p>
+                    <p>Kiểm tra tình trạng đơn hàng</p>
+                    <p>Đăng ký tài khoản</p>
+                    <p>Đăng nhập tài khoản</p>
+                </div>
+                <div class="column3">
+                    <h2>CHÍNH SÁCH</h2>
+                    <p>Chính sách đổi trả</p>
+                    <p>Chính sách bảo mật</p>
+                    <p>Chính sách vận chuyển</p>
+                    <p>Quy định sử dụng</p>
+                </div>
+                <div class="column4">
+                    <div class="icon">
+                        <i class="fa-brands fa-square-youtube"></i>
+                        <i class="fa-brands fa-square-facebook"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+                    <label for="dangky">
+                        <p>ĐĂNG KÝ NHẬN THÔNG TIN</p>
+                    </label>
+                    <br>
+                    <input type="text" placeholder="Nhập địa chỉ email">
+                    <button>Gửi</button>
+                </div>
+            </div>
+            <div class="area2">
+                <h3>@ Bản quyền thuộc về Nhot Vietnam | Cung cấp bởi NhotSneaker</h3>
+            </div>
+        </footer>
+
+    </div>
+</body>
+
+</html>

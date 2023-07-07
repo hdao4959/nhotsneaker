@@ -1,0 +1,246 @@
+*{
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto";
+}
+.container{
+    width: 1440px;
+    margin:0 auto;
+
+}
+nav{
+    background-color: black;
+    width: 1440px;
+    height: 100px;
+    color: white;
+    display: flex;
+    justify-content: space-between ;
+}
+
+.logo{
+    margin-top: 15px;
+
+}
+ul{
+    display: flex;
+}
+.menu ul li{
+    margin-top: 10px;
+    list-style-type: none;
+    text-decoration: none;
+    padding: 30px;
+    font-size: 23px;
+
+}
+.menu ul li a {
+    color: white;
+    text-decoration: none;
+}
+.menu ul li a:hover{
+    color:  rgb(141, 95, 9);
+}
+ul li:hover{
+    color: rgb(141, 95, 9);
+}
+nav .icon{
+    padding-top: 40px;
+}
+nav .icon i{
+    padding: 0 30px;
+}
+.fa-regular{
+    font-size: 30px;
+}
+.fa-regular:hover{
+    color: rgb(141, 95, 9);
+}
+.fa-solid{
+    font-size: 30px;
+}
+.fa-solid:hover{
+    color: rgb(141, 95, 9);
+}
+.banner{
+    width: 1440px;
+    height: 287px;
+    background-image: url(MLB/Banner.png) ;
+    background-repeat: no-repeat;
+
+}
+
+article h1{
+    font-weight: 900;
+    font-size: 40px;
+    margin-top: 30px;
+    text-align: center;
+}
+.product{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+.prd{
+    border: 1px rgb(200, 199, 199) solid;
+    width: 281px;
+    height: 360px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    cursor: pointer;
+}
+.prd:hover{
+    box-shadow: 4px 4px rgb(203, 201, 201) ;
+}
+.prd .text {
+    font-weight: 500;
+    font-family: Montserrat;
+    text-align: center;
+    padding: 20px;
+    font-size: 18px;
+    height: 90px;
+}
+.prd .price{
+    font-weight: 500;
+    font-size: 20px;
+    color: #BC0000;
+}
+.prd img{
+    width: 279px;
+    height: 208px;
+}
+article button{
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-items: center;
+    width: 240px;
+    height: 40px;
+}
+article button:hover{
+    background-color: rgb(141, 95, 9);
+}
+article button h3{
+    font-weight: 900;
+    line-height: 40px;
+}
+
+.phukien .text{
+    margin-top: 20px;
+}
+.phukien .product{
+    display: flex;
+    flex-direction: row;
+    margin: 30px 180px;
+}
+.phukien .column1{
+    position: relative;
+    display: inline-block;
+    width: 350px;
+    height: 460px;
+    cursor: pointer;
+}
+.phukien .column2{
+    width: 625px;
+    height: 460px;
+    display: flex;
+    flex-direction: column;
+}
+.column1 .text{
+    z-index: 1;
+    color: white;
+    top: 70%;
+    left: 5%;
+    position: absolute;
+}
+.column2 .phukien1 {
+    position: relative;
+    display: inline-block;
+    width: 625px ;
+    height: 210px;
+    cursor: pointer;
+}
+.column2 .phukien2 {
+    position: relative;
+    display: inline-block;
+    margin-top: 40px;
+    width: 625px ;
+    height: 210px;
+    cursor: pointer;
+}
+.column2 .text{
+    z-index: 1;
+    color: white;
+    top: 35%;
+    left: 2%;
+    position: absolute;
+}
+.phukien img:hover{
+    opacity: 0.8;
+}
+footer{
+    margin-top: 50px;
+    width: 1440px;
+    height: 400px;
+    background-color: black;
+    color: white;
+}
+.area1 {
+    display: flex;
+    flex-direction: row;
+    height: 300px;
+    border-bottom: 1px solid white;
+}
+
+.area1 .column1{
+    padding-top: 30px;
+}
+.area1 .column1 p{
+    padding-top: 15px;
+}
+.area1 .column2{
+    padding-top: 50px;
+}
+.area1 .column2 p{
+    padding-top: 15px;
+}
+.area1 .column3{
+    padding-top: 50px;
+}
+.area1 .column3 p{
+    padding-top: 15px;
+}
+.area1 .column4 .icon{
+    display: flex;
+    flex-direction: row;
+    padding-top: 40px;
+    margin-bottom: 20px;
+}
+.area1 .column4 .icon i{
+    display: flex;
+    justify-content: space-around;
+}
+.area1 .column4 button{
+    color : white;
+    background-color: black;
+}
+.area2{
+    text-align: center;
+    margin-top: 35px;
+}
+.fa-brands{
+    font-size: 40px;
+}
+
+label p{
+    font-size: 17px;
+}
+@media only screen and (min-width:600px) {
+    *{
+        max-width: 100%;
+    }
+}
